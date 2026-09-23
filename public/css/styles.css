@@ -1,0 +1,199 @@
+/* ==========================================================================
+   PickleBall4All - Modern High-Performance Stylesheet
+   Design System Tokens, Layout Utilities & Athletic Motifs
+   ========================================================================== */
+
+:root {
+  --color-charcoal: #111315;
+  --color-darkcard: #16191D;
+  --color-surface: #F8F9FA;
+  --color-tan: #C5A880;
+  --color-tan-hover: #B5966E;
+  --color-blue: #0284C7;
+  --color-blue-light: #38BDF8;
+  --color-lime: #D4E834;
+  --color-subtle-border: #23272B;
+  --color-court-green: #15803d;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-charcoal);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-tan);
+  color: #ffffff;
+}
+
+/* Accessible Focus States */
+:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Watermark Background Typography */
+.watermark-text {
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -0.02em;
+  line-height: 0.85;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.045);
+}
+
+/* Athletic Court Motifs */
+.court-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.court-kitchen-line {
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+/* Hero Coach Cutout Fade Styling */
+.hero-coach-img {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 78%, rgba(0, 0, 0, 0.3) 92%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 78%, rgba(0, 0, 0, 0.3) 92%, transparent 100%);
+}
+
+/* Glassmorphism accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-panel-dark {
+  background: rgba(22, 25, 29, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Interactive Card Elevate & Transitions */
+.card-hover {
+  transition: transform 0.28s var(--ease-spring), box-shadow 0.28s var(--ease-spring), border-color 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.12);
+}
+
+/* Tap target requirement (min 48px) */
+.tap-target-48 {
+  min-height: 48px;
+  min-width: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Drawer Overlay and Navigation */
+#mobile-menu-drawer {
+  transform: translateX(100%);
+  transition: transform 0.3s var(--ease-spring);
+}
+
+#mobile-menu-drawer.open {
+  transform: translateX(0);
+}
+
+#mobile-menu-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#mobile-menu-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Floating WhatsApp Quick Action Button */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 30px -5px rgba(37, 211, 102, 0.65);
+}
+
+/* Toast Notification */
+#toast-notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s var(--ease-spring), opacity 0.35s ease;
+  z-index: 100;
+}
+
+#toast-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B5966E;
+}
+
+/* Pulsing indicators */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.pulse-ring-effect {
+  animation: pulse-ring 2s infinite ease-in-out;
+}
