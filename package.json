@@ -2,11 +2,9 @@
   "name": "pickleball4all",
   "version": "1.0.0",
   "description": "Professional Pickleball Coaching in Jurong, Singapore by PPA Tour Asia Medalist Hari Mohan",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'Static assets ready for deployment'"
+    "dev": "node dev-server.js",
+    "start": "node dev-server.js"
   },
   "keywords": [
     "pickleball",

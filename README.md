@@ -30,9 +30,9 @@
 │   └── styles.css        # Design tokens, court motifs, and animations
 ├── js/
 │   └── app.js            # Interactive behaviors, mobile navigation drawer, and smooth scroll
-├── server.js             # Lightweight zero-dependency Node.js local preview server
+├── dev-server.js         # Lightweight zero-dependency Node.js local preview server
 ├── package.json          # Project metadata and run scripts
-├── vercel.json           # Vercel deployment, rewrites, and security headers
+├── vercel.json           # Vercel deployment configuration
 ├── .gitignore            # Git exclusions
 └── README.md             # Project documentation
 ```
@@ -45,13 +45,13 @@ You can preview the website locally using Node.js:
 
 ```bash
 # Start the local preview server (port 3000 by default)
-node server.js
+node dev-server.js
 ```
 
 Or using npm:
 
 ```bash
-npm start
+npm run dev
 ```
 
 Then open your browser at **[http://localhost:3000](http://localhost:3000)**.
