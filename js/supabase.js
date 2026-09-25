@@ -6,9 +6,14 @@
 (function () {
   'use strict';
 
-  const SUPABASE_PROJECT_ID = 'seelycwozohgvrxayvvt';
-  const SUPABASE_URL = 'https://seelycwozohgvrxayvvt.supabase.co';
-  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_Vf1TkD4fRjJWxPuOXIhwcA_gGeNTheQ';
+  // Retrieve Supabase configuration from runtime environment (__ENV__)
+  function getSupabaseConfig() {
+    const env = (typeof window !== 'undefined' && window.__ENV__) || {};
+    const projectId = env.SUPABASE_PROJECT_ID || '';
+    const url = env.SUPABASE_URL || (projectId ? `https://${projectId}.supabase.co` : '');
+    const key = env.SUPABASE_ANON_KEY || '';
+    return { projectId, url, key };
+  }
 
   let _sbClient = null;
 
@@ -16,11 +21,16 @@
   function getSupabaseClient() {
     if (_sbClient) return _sbClient;
 
+    const { projectId, url, key } = getSupabaseConfig();
+    if (!url || !key) {
+      return null;
+    }
+
     if (typeof window !== 'undefined' && window.supabase && typeof window.supabase.createClient === 'function') {
       try {
-        _sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+        _sbClient = window.supabase.createClient(url, key);
         window.supabaseClient = _sbClient;
-        console.log('✅ Supabase initialized for project:', SUPABASE_PROJECT_ID);
+        console.log('✅ Supabase initialized for project:', projectId || url);
         return _sbClient;
       } catch (e) {
         console.warn('Supabase createClient error:', e);
@@ -32,7 +42,7 @@
   // Attempt immediate initialization
   getSupabaseClient();
 
-  // Retry on DOMContentLoaded if SDK was deferred
+  // Retry on DOMContentLoaded if SDK or env was deferred
   if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
       getSupabaseClient();
@@ -45,7 +55,13 @@
    * @returns {Promise<{success: boolean, data?: any, error?: any}>}
    */
   async function submitBookingToSupabase(bookingData) {
+    const { url, key } = getSupabaseConfig();
     const client = getSupabaseClient();
+
+    if (!url || !key) {
+      console.warn('⚠️ Supabase credentials missing. Please check your .env configuration.');
+      return { success: false, error: 'Missing Supabase credentials' };
+    }
 
     const payload = {
       full_name: bookingData.name || bookingData.full_name || '',
@@ -78,11 +94,11 @@
 
     // Direct REST API Fallback (guarantees submission even if SDK load fails)
     try {
-      const restResponse = await fetch(`${SUPABASE_URL}/rest/v1/bookings`, {
+      const restResponse = await fetch(`${url}/rest/v1/bookings`, {
         method: 'POST',
         headers: {
-          'apikey': SUPABASE_PUBLISHABLE_KEY,
-          'Authorization': `Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+          'apikey': key,
+          'Authorization': `Bearer ${key}`,
           'Content-Type': 'application/json',
           'Prefer': 'return=minimal'
         },
@@ -104,11 +120,7 @@
   }
 
   // Expose configuration and functions globally
-  window.SUPABASE_CONFIG = {
-    projectId: SUPABASE_PROJECT_ID,
-    url: SUPABASE_URL,
-    publishableKey: SUPABASE_PUBLISHABLE_KEY
-  };
+  window.getSupabaseConfig = getSupabaseConfig;
   window.getSupabaseClient = getSupabaseClient;
   window.submitBookingToSupabase = submitBookingToSupabase;
 })();

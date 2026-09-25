@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Professional Pickleball Coaching in Jurong, Singapore by PPA Tour Asia Medalist Hari Mohan",
   "scripts": {
-    "build": "echo 'Static assets ready'",
-    "dev": "node dev-server.js",
+    "build": "node generate-env.js",
+    "dev": "node generate-env.js && node dev-server.js",
     "start": "node dev-server.js"
   },
   "keywords": [

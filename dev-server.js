@@ -22,10 +22,24 @@ const MIME_TYPES = {
   '.ttf': 'font/ttf'
 };
 
+// Auto-generate js/env.js on startup
+try {
+  require('./generate-env.js');
+} catch (e) {
+  console.warn('Could not auto-generate env.js:', e.message);
+}
+
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
   if (reqPath === '/' || reqPath === '') {
     reqPath = '/index.html';
+  }
+
+  // Ensure fresh env.js on request
+  if (reqPath === '/js/env.js') {
+    try {
+      require('./generate-env.js');
+    } catch (_) {}
   }
 
   let filePath = path.join(BASE_DIR, reqPath);
