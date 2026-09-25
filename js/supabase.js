@@ -6,12 +6,19 @@
 (function () {
   'use strict';
 
-  // Retrieve Supabase configuration from runtime environment (__ENV__)
+  // Default fallback credentials (Supabase public anon key is safe for client-side use)
+  const DEFAULT_CONFIG = {
+    projectId: 'seelycwozohgvrxayvvt',
+    url: 'https://seelycwozohgvrxayvvt.supabase.co',
+    publishableKey: 'sb_publishable_Vf1TkD4fRjJWxPuOXIhwcA_gGeNTheQ'
+  };
+
+  // Retrieve Supabase configuration from runtime environment (__ENV__) or fall back safely
   function getSupabaseConfig() {
     const env = (typeof window !== 'undefined' && window.__ENV__) || {};
-    const projectId = env.SUPABASE_PROJECT_ID || '';
-    const url = env.SUPABASE_URL || (projectId ? `https://${projectId}.supabase.co` : '');
-    const key = env.SUPABASE_ANON_KEY || '';
+    const projectId = env.SUPABASE_PROJECT_ID || DEFAULT_CONFIG.projectId;
+    const url = env.SUPABASE_URL || (projectId ? `https://${projectId}.supabase.co` : DEFAULT_CONFIG.url);
+    const key = env.SUPABASE_ANON_KEY || DEFAULT_CONFIG.publishableKey;
     return { projectId, url, key };
   }
 
