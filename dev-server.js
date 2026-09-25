@@ -52,13 +52,30 @@ const server = http.createServer((req, res) => {
 
     res.writeHead(200, {
       'Content-Type': contentType,
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': '*',
+      'Cache-Control': 'no-cache, no-store, must-revalidate'
     });
 
     fs.createReadStream(filePath).pipe(res);
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`Local dev server running at http://localhost:${PORT}/`);
+let currentPort = Number(process.env.PORT) || 3000;
+
+function startServer(port) {
+  currentPort = port;
+  server.listen(port, () => {
+    console.log(`Local dev server running at http://localhost:${port}/`);
+  });
+}
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.log(`Port ${currentPort} is busy, trying ${currentPort + 1}...`);
+    startServer(currentPort + 1);
+  } else {
+    console.error('Server error:', err);
+  }
 });
+
+startServer(currentPort);

@@ -100,8 +100,8 @@ function initBookingForm() {
   const whatsappSubmitBtn = document.getElementById('whatsapp-submit-btn');
   if (!form) return;
 
-  // Regular Form Submit (AJAX emulation with toast feedback)
-  form.addEventListener('submit', (e) => {
+  // Regular Form Submit with Supabase backend persistence & toast feedback
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     if (!form.checkValidity()) {
@@ -109,15 +109,51 @@ function initBookingForm() {
       return;
     }
 
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit Request Form';
+
     const name = document.getElementById('full-name')?.value.trim();
     const phone = document.getElementById('phone-number')?.value.trim();
-    const program = document.getElementById('program-type')?.selectedOptions[0]?.text;
+    const email = document.getElementById('email')?.value.trim();
+    const level = document.getElementById('playing-level')?.value;
+    const program = document.getElementById('program-type')?.value;
+    const timing = document.getElementById('timing-pref')?.value;
+    const notes = document.getElementById('notes')?.value.trim();
 
-    showToast(`Thank you ${name}! Hari Mohan will contact you at ${phone} to confirm your ${program} session.`, 'success');
+    const programLabel = document.getElementById('program-type')?.selectedOptions[0]?.text || program;
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `Saving Booking...`;
+    }
+
+    // Persist to Supabase
+    if (typeof window.submitBookingToSupabase === 'function') {
+      try {
+        await window.submitBookingToSupabase({
+          name,
+          phone,
+          email,
+          level,
+          program,
+          time_slot: timing,
+          notes
+        });
+      } catch (err) {
+        console.warn('Supabase booking submission non-blocking notice:', err);
+      }
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    }
+
+    showToast(`Thank you ${name}! Your booking for "${programLabel}" has been received. Coach Hari will contact you at ${phone} to confirm.`, 'success');
     form.reset();
   });
 
-  // Direct WhatsApp Deep-Link Builder
+  // Direct WhatsApp Deep-Link Builder (also logs lead to Supabase)
   if (whatsappSubmitBtn) {
     whatsappSubmitBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -134,6 +170,19 @@ function initBookingForm() {
         showToast('Please enter your Name and Phone/WhatsApp number first.', 'warning');
         document.getElementById('full-name')?.focus();
         return;
+      }
+
+      // Log lead to Supabase asynchronously
+      if (typeof window.submitBookingToSupabase === 'function') {
+        window.submitBookingToSupabase({
+          name,
+          phone,
+          email,
+          level,
+          program,
+          time_slot: timing,
+          notes: notes ? `[Via WhatsApp CTA] ${notes}` : '[Via WhatsApp CTA]'
+        }).catch(() => {});
       }
 
       let message = `Hi Coach Hari! I would like to book a pickleball coaching session with PickleBall4All.\n\n`;

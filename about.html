@@ -61,22 +61,15 @@
     <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a class="flex items-center gap-3 group" data-purpose="brand-identity" href="/">
-        <div class="w-10 h-10 rounded-xl bg-[#111315] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-200">
-          <svg class="w-5 h-5 text-[#D4E834]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-            <path d="M2 12h20"></path>
-          </svg>
-        </div>
-        <span class="text-xl font-black tracking-tight text-[#111315]">PickleBall<span class="text-[#0284C7]">4</span>All</span>
+      <a class="flex items-center group" data-purpose="brand-identity" href="/">
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-[#111315]">PickleBall<span class="text-[#0284C7]">4</span>All</span>
       </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-gray-700" aria-label="Main Navigation">
         <a class="hover:text-[#0284C7] transition-colors py-2" href="/">Home</a>
         <a class="text-[#0284C7] border-b-2 border-[#0284C7] py-2" href="/about">About Hari</a>
-        <a class="hover:text-[#0284C7] transition-colors py-2" href="/#programs">Coaching</a>
+        <a class="hover:text-[#0284C7] transition-colors py-2" href="/coaching">Coaching Programs</a>
       </nav>
 
       <!-- Right Action CTA -->
@@ -88,7 +81,7 @@
           <span>+65 8900 0521</span>
         </a>
 
-        <a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all tap-target-48" href="index.html#contact">
+        <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all tap-target-48" href="index.html#contact">
           Book A Session
         </a>
 
@@ -120,9 +113,15 @@
       <nav class="flex flex-col gap-4 mt-6 text-base font-semibold text-gray-800">
         <a class="py-2 hover:text-[#0284C7] transition-colors" href="/">Home</a>
         <a class="py-2 text-[#0284C7] font-bold" href="/about">About Hari</a>
-        <a class="py-2 hover:text-[#0284C7] transition-colors" href="/#programs">Coaching</a>
-        <a class="py-2 hover:text-[#0284C7] transition-colors" href="/#contact">Book A Session</a>
+        <a class="py-2 hover:text-[#0284C7] transition-colors" href="/coaching">Coaching Programs</a>
       </nav>
+
+      <!-- Replaced plain text link with primary action button -->
+      <div class="mt-6 pt-5 border-t border-gray-100">
+        <a class="flex items-center justify-center w-full py-3.5 px-6 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider shadow-md transition-all tap-target-48 text-center" href="index.html#contact">
+          Book A Session
+        </a>
+      </div>
     </div>
 
     <div class="pt-6 border-t border-gray-100 space-y-3">
@@ -264,7 +263,7 @@
       
       <div class="text-center max-w-2xl mx-auto mb-14">
         <div class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-xs font-bold uppercase tracking-wider mb-3">
-          The Approach
+          Coaching Philosophy
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-[#111315] tracking-tight">
           How Coach Hari Trains His Players
@@ -315,65 +314,329 @@
   </section>
 
   <!-- ========================================================================
-       BEGIN: Verified Player Feedback on Coach Hari
+       BEGIN: Pro Player Career & Tournament Achievements
        ======================================================================== -->
-  <section class="py-12 sm:py-14 max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-    <div class="text-center max-w-2xl mx-auto mb-12">
-      <div class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
-        Student Feedback
-      </div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#111315] tracking-tight">
-        What Players Say About Training With Hari
-      </h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <section class="py-14 sm:py-18 bg-[#F8F9FA] border-b border-gray-200/80" id="player-achievements">
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
       
-      <!-- Review 1 -->
-      <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between">
-        <div>
-          <div class="flex text-amber-400 mb-4">
-            ★★★★★
-          </div>
-          <blockquote class="text-gray-700 text-sm sm:text-base leading-relaxed italic">
-            "Hari is a wonderful coach. I learn so much from him at each lesson, as he patiently teaches, shows and guides us on the moves and footwork. Each lesson spends time on learning and practising before progressing to a proper game where we apply what we have learnt. I appreciate that Hari is not calculative with his time, often staying back to play with us after lessons. Watching his play also is a learning, and I've definitely improved so much after Hari's lessons!"
-          </blockquote>
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#111315] text-[#D4E834] text-xs font-bold uppercase tracking-wider mb-3">
+          <svg class="w-3.5 h-3.5 text-[#D4E834]" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+          Pro Playing Career
         </div>
-        <div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-[#0284C7] text-white font-bold flex items-center justify-center text-sm">
-            J
-          </div>
-          <div>
-            <h4 class="font-bold text-sm text-gray-900">June</h4>
-            <p class="text-xs text-gray-500">Pickleball Student • Jurong Court</p>
-          </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#111315] tracking-tight">
+          Championship Pedigree &amp; International Medals
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
+          Hari doesn't just teach the theory of pickleball—he actively competes and wins at the highest regional and international levels against top players in Asia.
+        </p>
+      </div>
+
+      <!-- Key Player Stats Banner -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12">
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center card-hover">
+          <div class="text-3xl sm:text-4xl font-black text-[#111315] mb-1">5.03</div>
+          <div class="text-xs font-bold text-[#0284C7] uppercase tracking-wider">DUPR Rating</div>
+          <p class="text-[11px] text-gray-500 mt-1">Official Elite / Pro Tier</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center card-hover">
+          <div class="text-3xl sm:text-4xl font-black text-[#111315] mb-1">PPA Tour</div>
+          <div class="text-xs font-bold text-amber-600 uppercase tracking-wider">Asia Double Medalist</div>
+          <p class="text-[11px] text-gray-500 mt-1">PickleSlam 125 Gold &amp; Silver</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center card-hover">
+          <div class="text-3xl sm:text-4xl font-black text-[#111315] mb-1">3× Gold</div>
+          <div class="text-xs font-bold text-emerald-600 uppercase tracking-wider">International Titles</div>
+          <p class="text-[11px] text-gray-500 mt-1">Singapore, Bali &amp; Borneo</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center card-hover">
+          <div class="text-3xl sm:text-4xl font-black text-[#111315] mb-1">#12</div>
+          <div class="text-xs font-bold text-purple-600 uppercase tracking-wider">SPA National Ranking</div>
+          <p class="text-[11px] text-gray-500 mt-1">Singapore Masters Division</p>
         </div>
       </div>
 
-      <!-- Review 2 -->
-      <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between">
-        <div>
-          <div class="flex text-amber-400 mb-4">
-            ★★★★★
-          </div>
-          <blockquote class="text-gray-700 text-sm sm:text-base leading-relaxed italic">
-            "Hari is systematic and patient in his coaching. His instruction is clear and simple. He coaches with passion, sharing skills, rules, strategies and techniques. Being sensitive and empathetic, he paced my training as I am 60 years old and have poor stamina and strength. He even taught me off-court training techniques and exercises. I have learned a lot and am inspired to improve my stamina through his guidance."
-          </blockquote>
-        </div>
-        <div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-[#C5A880] text-white font-bold flex items-center justify-center text-sm">
-            T
-          </div>
+      <!-- Tournament Podium Highlights Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Tournament 1 -->
+        <div class="bg-white rounded-3xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between card-hover">
           <div>
-            <h4 class="font-bold text-sm text-gray-900">Mr. Tan</h4>
-            <p class="text-xs text-gray-500">Senior Student (Age 60+) • Jurong Court</p>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold">
+                🥇 Gold &amp; 🥈 Silver
+              </span>
+              <span class="text-xs font-bold text-gray-400">Singapore</span>
+            </div>
+            <h3 class="text-lg font-bold text-[#111315] mb-2">PPA Tour Asia – PickleSlam 125</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <strong>Gold Medal</strong> in Men's Doubles 50+ with partner Andrew Tan, followed by reaching the championship finals to claim the <strong>Silver Medal</strong> in Men's Singles 50+.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span>PPA Tour Asia Circuit</span>
+            <span class="font-semibold text-gray-700">Official Sanctioned</span>
           </div>
         </div>
+
+        <!-- Tournament 2 -->
+        <div class="bg-white rounded-3xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold">
+                🥇 Champion (Gold)
+              </span>
+              <span class="text-xs font-bold text-gray-400">Malaysia</span>
+            </div>
+            <h3 class="text-lg font-bold text-[#111315] mb-2">Borneo Pickleball International</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Crowned <strong>Gold Medal Champions</strong> in the Mixed Doubles Veteran category alongside partner Varsha Majmudar, outperforming top regional pairings across Southeast Asia.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span>International Championship</span>
+            <span class="font-semibold text-gray-700">Gold Medalist</span>
+          </div>
+        </div>
+
+        <!-- Tournament 3 -->
+        <div class="bg-white rounded-3xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold">
+                🥇 Gold &amp; 🥉 Bronze
+              </span>
+              <span class="text-xs font-bold text-gray-400">Bali, Indonesia</span>
+            </div>
+            <h3 class="text-lg font-bold text-[#111315] mb-2">World Pickleball Championship</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Earned the <strong>Gold Medal</strong> in Men's Doubles 60+ and captured the <strong>Bronze Medal</strong> in Men's Doubles 50+ Advanced category alongside partner Jasen Tham.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span>Global Championship</span>
+            <span class="font-semibold text-gray-700">Multi-Medalist</span>
+          </div>
+        </div>
+
+        <!-- Tournament 4 -->
+        <div class="bg-white rounded-3xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 text-orange-800 text-xs font-bold">
+                🥉 Bronze Medal
+              </span>
+              <span class="text-xs font-bold text-gray-400">International</span>
+            </div>
+            <h3 class="text-lg font-bold text-[#111315] mb-2">Pickleball World Cup</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Secured the <strong>Bronze Medal</strong> in Mixed Doubles 50+ competing in the high-intensity <strong>≥ 4.5 Advanced Skill Division</strong> with partner Varsha Majmudar.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span>World Cup Stage</span>
+            <span class="font-semibold text-gray-700">4.5+ Skill Division</span>
+          </div>
+        </div>
+
+        <!-- Tournament 5 -->
+        <div class="bg-white rounded-3xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-bold">
+                🥈 Silver Medal
+              </span>
+              <span class="text-xs font-bold text-gray-400">Kuala Lumpur</span>
+            </div>
+            <h3 class="text-lg font-bold text-[#111315] mb-2">PPA Tour Asia – Panas Malaysia Open</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Finished <strong>2nd Place (Silver Medal)</strong> in the 50+ Open Men's Doubles against prominent international contenders on the official PPA Tour Asia stop.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span>PPA Tour Asia Open</span>
+            <span class="font-semibold text-gray-700">Podium Finish</span>
+          </div>
+        </div>
+
+        <!-- Tournament 6 / National Standing -->
+        <div class="bg-white rounded-3xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-bold">
+                🇸🇬 National Standing
+              </span>
+              <span class="text-xs font-bold text-gray-400">Singapore</span>
+            </div>
+            <h3 class="text-lg font-bold text-[#111315] mb-2">Singapore Pickleball Association (SPA)</h3>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              Consistently ranked among Singapore's top players (#12 in Men's Masters Singles and Mixed Seniors Doubles) and nominated to the <strong>SPA Board of Directors</strong> at the AGM.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span>National Association</span>
+            <span class="font-semibold text-gray-700">Leadership &amp; Ranking</span>
+          </div>
+        </div>
+
       </div>
 
     </div>
   </section>
 
+  <!-- ========================================================================
+       BEGIN: Pro Coaching Achievements & Community Impact
+       ======================================================================== -->
+  <section class="py-14 sm:py-18 bg-white border-b border-gray-200/80" id="coaching-achievements">
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Professional Coaching Track Record
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#111315] tracking-tight">
+          Transforming Players Across Jurong &amp; Singapore
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
+          Through <strong>Hari Pickleball Coaching</strong>, Coach Hari brings a rare combination of competitive rigor, endless patience, and tailored instruction to students of every age and skill background.
+        </p>
+      </div>
+
+      <!-- Coaching Highlights & Google Social Proof Callout Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+        
+        <!-- Left: Google Maps Verified Excellence Card (5 cols) -->
+        <div class="lg:col-span-5 bg-[#111315] text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between shadow-xl border border-gray-800 relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-[#D4E834]/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#D4E834] text-xs font-bold uppercase tracking-wider mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#D4E834]"></span>
+              Google Verified Coaching Centre
+            </div>
+
+            <div class="flex items-baseline gap-3 mb-3">
+              <span class="text-5xl font-black text-white">5.0</span>
+              <div>
+                <div class="text-amber-400 text-lg">★★★★★</div>
+                <div class="text-xs text-gray-400 font-medium">100% 5-Star Reviews</div>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-white mb-3">Hari Pickleball Coaching</h3>
+            <p class="text-sm text-gray-300 leading-relaxed mb-6">
+              Recognized on Google Maps as one of Western Singapore’s most trusted independent pickleball coaching academies, with <strong>78+ verified 5-star student reviews</strong> and zero negative ratings.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-5">
+              <li class="flex items-center justify-between">
+                <span class="text-gray-400">Technical Instruction:</span>
+                <span class="font-bold text-white">5.0 / 5.0 ★</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-gray-400">Patience &amp; Pacing:</span>
+                <span class="font-bold text-white">5.0 / 5.0 ★</span>
+              </li>
+              <li class="flex items-center justify-between">
+                <span class="text-gray-400">Court Facility (Jurong):</span>
+                <span class="font-bold text-white">6 Tao Ching Road</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-4">
+            <a 
+              href="https://maps.app.goo.gl/MS89YNvPviXWvfTX8" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#D4E834] hover:bg-[#c3d72d] text-[#111315] font-extrabold text-xs uppercase tracking-wider transition-all shadow-md tap-target-48"
+            >
+              <span>View Reviews on Google Maps</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: 4 Core Coaching Achievements & Hallmarks (7 cols) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          
+          <!-- Hallmark 1 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#F8F9FA] border border-gray-200 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-[#0284C7]/10 text-[#0284C7] flex items-center justify-center font-black text-sm mb-4">
+                ✓
+              </div>
+              <h3 class="text-base font-bold text-[#111315] mb-2">Senior-Paced Physical Safety</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Specialized in training mature adults and 60+ seniors, customizing movement intensity, joint-friendly footwork, and off-court conditioning to build stamina safely.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-200/60 text-[11px] font-bold text-[#0284C7] uppercase tracking-wider">
+              Safe &amp; Adaptive Progression
+            </div>
+          </div>
+
+          <!-- Hallmark 2 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#F8F9FA] border border-gray-200 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-black text-sm mb-4">
+                ✓
+              </div>
+              <h3 class="text-base font-bold text-[#111315] mb-2">Uncalculative Court Dedication</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Widely celebrated in student reviews for regularly staying past lesson times to play live practice points, ensuring players internalize tactical lessons under real match stress.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-200/60 text-[11px] font-bold text-amber-600 uppercase tracking-wider">
+              Student-First Mentorship
+            </div>
+          </div>
+
+          <!-- Hallmark 3 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#F8F9FA] border border-gray-200 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-black text-sm mb-4">
+                ✓
+              </div>
+              <h3 class="text-base font-bold text-[#111315] mb-2">Tournament Strategy Transfer</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Draws directly from PPA Tour Asia medal experience to break down third-shot drops, speedup selection, dink patience, and doubles stacking for intermediate competitors.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-200/60 text-[11px] font-bold text-emerald-600 uppercase tracking-wider">
+              Active Pro Match Tactics
+            </div>
+          </div>
+
+          <!-- Hallmark 4 -->
+          <div class="p-6 sm:p-7 rounded-2xl bg-[#F8F9FA] border border-gray-200 card-hover flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center font-black text-sm mb-4">
+                ✓
+              </div>
+              <h3 class="text-base font-bold text-[#111315] mb-2">All Equipment Fully Provided</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Zero friction for beginners: high-grade tournament paddles, regulation balls, and private court reservations in Jurong are prepared so students focus purely on learning.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-200/60 text-[11px] font-bold text-purple-600 uppercase tracking-wider">
+              Hassle-Free Experience
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
   <!-- ========================================================================
        BEGIN: Direct Booking CTA Strip
        ======================================================================== -->
@@ -433,7 +696,7 @@
           <ul class="space-y-2 text-xs text-gray-600 font-medium">
             <li><a class="hover:text-[#0284C7] transition-colors" href="/">Home</a></li>
             <li><a class="text-[#0284C7] font-semibold" href="/about">About Hari</a></li>
-            <li><a class="hover:text-[#0284C7] transition-colors" href="/#programs">Coaching Programs</a></li>
+            <li><a class="hover:text-[#0284C7] transition-colors" href="/coaching">Coaching Programs</a></li>
             <li><a class="hover:text-[#0284C7] transition-colors" href="/#why-us">Why PickleBall4All</a></li>
             <li><a class="hover:text-[#0284C7] transition-colors" href="/#reviews">Verified Reviews</a></li>
             <li><a class="hover:text-[#0284C7] transition-colors" href="/#location">Court Location</a></li>
@@ -478,7 +741,11 @@
     <span>Chat with Hari</span>
   </button>
 
+  <!-- Supabase JS Client & Configuration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/supabase.js?v=2"></script>
+
   <!-- Core JavaScript Interactions -->
-  <script src="/js/app.js"></script>
+  <script src="/js/app.js?v=2"></script>
 </body>
 </html>

@@ -14,6 +14,10 @@
       "dest": "/about.html"
     },
     {
+      "src": "/coaching",
+      "dest": "/coaching.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/$1"
     }

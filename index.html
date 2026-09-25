@@ -61,22 +61,15 @@
     <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a class="flex items-center gap-3 group" data-purpose="brand-identity" href="#hero">
-        <div class="w-10 h-10 rounded-xl bg-[#111315] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-200">
-          <svg class="w-5 h-5 text-[#D4E834]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-            <path d="M2 12h20"></path>
-          </svg>
-        </div>
-        <span class="text-xl font-black tracking-tight text-[#111315]">PickleBall<span class="text-[#0284C7]">4</span>All</span>
+      <a class="flex items-center group" data-purpose="brand-identity" href="#hero">
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-[#111315]">PickleBall<span class="text-[#0284C7]">4</span>All</span>
       </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-gray-700" aria-label="Main Navigation">
         <a class="hover:text-[#0284C7] transition-colors py-2" href="/">Home</a>
         <a class="hover:text-[#0284C7] transition-colors py-2" href="/about">About Hari</a>
-        <a class="hover:text-[#0284C7] transition-colors py-2" href="/#programs">Coaching</a>
+        <a class="hover:text-[#0284C7] transition-colors py-2" href="/coaching">Coaching Programs</a>
       </nav>
 
       <!-- Right Action CTA -->
@@ -88,7 +81,7 @@
           <span>+65 8900 0521</span>
         </a>
 
-        <a class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all tap-target-48" href="#contact">
+        <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all tap-target-48" href="#contact">
           Book A Session
         </a>
 
@@ -120,9 +113,15 @@
       <nav class="flex flex-col gap-4 mt-6 text-base font-semibold text-gray-800">
         <a class="py-2 hover:text-[#0284C7] transition-colors" href="/">Home</a>
         <a class="py-2 hover:text-[#0284C7] transition-colors" href="/about">About Hari</a>
-        <a class="py-2 hover:text-[#0284C7] transition-colors" href="/#programs">Coaching</a>
-        <a class="py-2 hover:text-[#0284C7] transition-colors" href="/#contact">Book A Session</a>
+        <a class="py-2 hover:text-[#0284C7] transition-colors" href="/coaching">Coaching Programs</a>
       </nav>
+
+      <!-- Replaced plain text link with primary action button -->
+      <div class="mt-6 pt-5 border-t border-gray-100">
+        <a class="flex items-center justify-center w-full py-3.5 px-6 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider shadow-md transition-all tap-target-48 text-center" href="#contact">
+          Book A Session
+        </a>
+      </div>
     </div>
 
     <div class="pt-6 border-t border-gray-100 space-y-3">
@@ -509,7 +508,7 @@
       
       <div class="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm relative card-hover">
         <span class="w-8 h-8 rounded-full bg-[#111315] text-[#D4E834] text-xs font-black flex items-center justify-center mb-4">1</span>
-        <h3 class="text-lg font-bold text-[#111315] mb-1">01 ASSESS</h3>
+        <h3 class="text-lg font-bold text-[#111315] mb-1">ASSESS</h3>
         <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
           Understand your current level, previous racquet experience, physical comfort, and immediate targets.
         </p>
@@ -517,7 +516,7 @@
 
       <div class="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm relative card-hover">
         <span class="w-8 h-8 rounded-full bg-[#0284C7] text-white text-xs font-black flex items-center justify-center mb-4">2</span>
-        <h3 class="text-lg font-bold text-[#111315] mb-1">02 TRAIN</h3>
+        <h3 class="text-lg font-bold text-[#111315] mb-1">TRAIN</h3>
         <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
           Work intensely on paddle control, paddle angle, contact point consistency, and swift recovery footwork.
         </p>
@@ -525,7 +524,7 @@
 
       <div class="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm relative card-hover">
         <span class="w-8 h-8 rounded-full bg-[#C5A880] text-white text-xs font-black flex items-center justify-center mb-4">3</span>
-        <h3 class="text-lg font-bold text-[#111315] mb-1">03 PLAY</h3>
+        <h3 class="text-lg font-bold text-[#111315] mb-1">PLAY</h3>
         <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
           Apply the newly built strokes into simulated match scenarios, live dink exchanges, and live point play.
         </p>
@@ -533,7 +532,7 @@
 
       <div class="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm relative card-hover">
         <span class="w-8 h-8 rounded-full bg-emerald-600 text-white text-xs font-black flex items-center justify-center mb-4">4</span>
-        <h3 class="text-lg font-bold text-[#111315] mb-1">04 IMPROVE</h3>
+        <h3 class="text-lg font-bold text-[#111315] mb-1">IMPROVE</h3>
         <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
           Identify remaining shot liabilities, reinforce strengths, and formulate a continuous progression plan.
         </p>
@@ -1000,7 +999,7 @@
           <ul class="space-y-2 text-xs text-gray-600 font-medium">
             <li><a class="hover:text-[#0284C7] transition-colors" href="/">Home</a></li>
             <li><a class="hover:text-[#0284C7] transition-colors" href="/about">About Hari</a></li>
-            <li><a class="hover:text-[#0284C7] transition-colors" href="/#programs">Coaching Programs</a></li>
+            <li><a class="hover:text-[#0284C7] transition-colors" href="/coaching">Coaching Programs</a></li>
             <li><a class="hover:text-[#0284C7] transition-colors" href="/#why-us">Why PickleBall4All</a></li>
             <li><a class="hover:text-[#0284C7] transition-colors" href="/#reviews">Verified Reviews</a></li>
             <li><a class="hover:text-[#0284C7] transition-colors" href="/#location">Court Location</a></li>
@@ -1051,7 +1050,11 @@
     <span>Chat with Hari</span>
   </button>
 
+  <!-- Supabase JS Client & Configuration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/supabase.js?v=2"></script>
+
   <!-- Client-side logic -->
-  <script src="/js/app.js" defer></script>
+  <script src="/js/app.js?v=2" defer></script>
 </body>
 </html>

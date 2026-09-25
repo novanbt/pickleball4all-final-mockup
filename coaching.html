@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching Programs & Courses | PickleBall4All – Jurong, Singapore</title>
+  <meta name="description" content="Explore structured pickleball coaching programs in Singapore: Beginner, Intermediate Skills & Technique, and Advanced Competitive Tournament training by PPA Tour Asia Medalist Coach Hari Mohan.">
+  <meta name="keywords" content="pickleball coaching singapore, pickleball courses jurong, beginner pickleball lessons, intermediate pickleball skills, competitive pickleball training, Hari Mohan coach, PickleBall4All programs">
+  <meta name="author" content="PickleBall4All">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pickleball Coaching Programs & Courses | PickleBall4All">
+  <meta property="og:description" content="Personalized, metric-driven pickleball courses in Jurong, Singapore across Beginner, Intermediate, and Competitive levels.">
+  <meta property="og:image" content="/assets/images/about-medals.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v3 via CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              charcoal: '#111315',
+              darkcard: '#16191D',
+              lime: '#D4E834',
+              blue: '#0284C7',
+              gold: '#C5A880',
+              golddark: '#B5966E',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.08);
+    }
+    .tap-target-48 {
+      min-height: 48px;
+    }
+  </style>
+</head>
+<body class="bg-[#F8F9FA] text-[#111315] font-sans antialiased selection:bg-[#C5A880] selection:text-white">
+
+  <!-- ========================================================================
+       BEGIN: Navigation Bar
+       ======================================================================== -->
+  <header class="sticky top-0 z-50 w-full transition-all duration-300 backdrop-blur-md bg-white/85 border-b border-gray-200/80">
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo Wordmark -->
+      <a class="flex items-center group" data-purpose="brand-identity" href="/">
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-[#111315]">PickleBall<span class="text-[#0284C7]">4</span>All</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-gray-700" aria-label="Main Navigation">
+        <a class="hover:text-[#0284C7] transition-colors py-2" href="/">Home</a>
+        <a class="hover:text-[#0284C7] transition-colors py-2" href="/about">About Hari</a>
+        <a class="text-[#0284C7] border-b-2 border-[#0284C7] py-2" href="/coaching">Coaching Programs</a>
+      </nav>
+
+      <!-- Right Action CTA -->
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:inline-flex items-center gap-2 text-xs font-bold text-gray-700 px-3.5 py-2.5 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors tap-target-48" href="tel:+6589000521">
+          <svg class="w-3.5 h-3.5 text-[#0284C7]" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+          </svg>
+          <span>+65 8900 0521</span>
+        </a>
+
+        <!-- Desktop/Tablet CTA Button -->
+        <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:shadow-md transition-all tap-target-48" href="/#contact">
+          Book A Session
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-toggle" type="button" class="lg:hidden p-2 rounded-xl text-gray-700 hover:bg-gray-100 transition-colors tap-target-48" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-menu-drawer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 lg:hidden"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white z-50 shadow-2xl p-6 flex flex-col justify-between lg:hidden" aria-hidden="true">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-gray-100">
+        <span class="text-lg font-black text-[#111315]">PickleBall<span class="text-[#0284C7]">4</span>All</span>
+        <button id="mobile-menu-close" type="button" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 tap-target-48" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 mt-6 text-base font-semibold text-gray-800">
+        <a class="py-2 hover:text-[#0284C7] transition-colors" href="/">Home</a>
+        <a class="py-2 hover:text-[#0284C7] transition-colors" href="/about">About Hari</a>
+        <a class="py-2 text-[#0284C7] font-bold" href="/coaching">Coaching Programs</a>
+      </nav>
+
+      <!-- Full-Width Mobile CTA Button in Drawer -->
+      <div class="mt-6 pt-5 border-t border-gray-100">
+        <a class="flex items-center justify-center w-full py-3.5 px-6 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider shadow-md transition-all tap-target-48 text-center" href="/#contact">
+          Book A Session
+        </a>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-gray-100 space-y-3">
+      <a class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gray-100 text-gray-900 font-bold text-xs" href="tel:+6589000521">
+        📞 Call +65 8900 0521
+      </a>
+      <a class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#25D366] text-white font-bold text-xs" href="https://wa.me/6589000521" target="_blank" rel="noopener noreferrer">
+        💬 WhatsApp Coach Hari
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       BEGIN: Page Hero Header / Course Selector
+       ======================================================================== -->
+  <section class="bg-gradient-to-b from-white via-gray-50 to-[#F8F9FA] border-b border-gray-200/80 pt-10 pb-14">
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-gray-500 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-[#0284C7] transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-gray-900">Coaching Programs</span>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#111315] text-[#D4E834] text-xs font-bold uppercase tracking-wider mb-4">
+          Structured Player Progression
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-[#111315] tracking-tight leading-tight">
+          Pickleball Coaching Programs &amp; Courses
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
+          Every player arrives with different court habits, athletic background, and personal goals. Coach Hari Mohan (PPA Tour Asia Medalist, 5.03 DUPR) delivers a progressive, metric-driven curriculum designed to build true match confidence.
+        </p>
+      </div>
+
+      <!-- Quick Stage Jump Pills -->
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#beginner" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-300 text-xs font-bold text-gray-800 hover:border-[#0284C7] hover:text-[#0284C7] transition-colors shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#0284C7]"></span>
+          Stage 01: Beginner Coaching ↓
+        </a>
+        <a href="#intermediate" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111315] text-white border border-gray-900 text-xs font-bold hover:bg-gray-800 transition-colors shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#D4E834]"></span>
+          Stage 02: Skills &amp; Technique (Popular) ↓
+        </a>
+        <a href="#competitive" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-300 text-xs font-bold text-gray-800 hover:border-[#C5A880] hover:text-[#C5A880] transition-colors shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#C5A880]"></span>
+          Stage 03: Competitive Coaching ↓
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 1: Beginner Coaching (Stage 01 - Introductory)
+       ======================================================================== -->
+  <section id="beginner" class="py-16 sm:py-20 border-b border-gray-200/80 bg-white scroll-mt-24">
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-[#0284C7] text-xs font-bold uppercase tracking-wider mb-3">
+            <span class="w-2 h-2 rounded-full bg-[#0284C7]"></span>
+            Stage 01 • Introductory Level
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#111315] tracking-tight">
+            Beginner Coaching: Foundation &amp; Court Confidence
+          </h2>
+          <p class="mt-3 text-base text-gray-600 leading-relaxed">
+            Learn the fundamentals, court positioning, basic strokes, serving and scoring in a supportive, zero-intimidation environment. Designed for new players, tennis/badminton switchers, and seniors starting fresh.
+          </p>
+        </div>
+
+        <div class="mt-6 lg:mt-0 flex items-center gap-4">
+          <a href="/#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#111315] hover:bg-gray-800 text-white font-bold text-xs uppercase tracking-wider transition-all shadow tap-target-48">
+            Book Beginner Session
+          </a>
+        </div>
+      </div>
+
+      <!-- 3x1 Divs: Detailed Beginner Pointers Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Beginner Pointer 1: Rules, Scoring & Court Etiquette -->
+        <div class="rounded-3xl p-8 bg-[#F8F9FA] border border-gray-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#0284C7]/10 text-[#0284C7] flex items-center justify-center font-black text-xl mb-6">
+              01
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#0284C7] mb-1">Pillar 1 • Gameplay Structure</div>
+            <h3 class="text-xl font-bold text-[#111315] mb-3">Rules, Scoring &amp; Court Etiquette</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Demystify pickleball’s unique rule set from day one so you never feel lost during open games or recreational social play.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>The 2-Bounce Rule:</strong> Understanding why the return of serve must bounce before being played.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>3-Number Scoring System:</strong> Master server score, receiver score, and server number (1 or 2).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Service Footwork &amp; Trajectory:</strong> Legal underhand contact, paddle head below wrist, and deep target box placement.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-gray-200/70 text-xs font-medium text-gray-500">
+            Outcome: Step onto any court in Singapore and play full matches with zero hesitation.
+          </div>
+        </div>
+
+        <!-- Beginner Pointer 2: Grip, Forehand & Backhand Fundamentals -->
+        <div class="rounded-3xl p-8 bg-[#F8F9FA] border border-gray-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#0284C7]/10 text-[#0284C7] flex items-center justify-center font-black text-xl mb-6">
+              02
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#0284C7] mb-1">Pillar 2 • Stroke Mechanics</div>
+            <h3 class="text-xl font-bold text-[#111315] mb-3">Grip, Forehand &amp; Backhand Mechanics</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Build clean muscle memory. We eliminate tennis wrist snaps, late contact points, and off-balance stances through structured repetition.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Continental Grip Mastery:</strong> One universal neutral grip that handles both forehand and backhand without awkward shifts.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Compact Backswing:</strong> Eliminating excessive racquet backswings to handle fast close-range balls cleanly.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Point of Contact:</strong> Always striking the ball out in front of your lead hip for controlled, repeatable depth.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-gray-200/70 text-xs font-medium text-gray-500">
+            Outcome: Consistent groundstrokes that clear the net cleanly without sailing out.
+          </div>
+        </div>
+
+        <!-- Beginner Pointer 3: Kitchen (NVZ) Safety & Dink Control -->
+        <div class="rounded-3xl p-8 bg-[#F8F9FA] border border-gray-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#0284C7]/10 text-[#0284C7] flex items-center justify-center font-black text-xl mb-6">
+              03
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#0284C7] mb-1">Pillar 3 • Soft Game & Safety</div>
+            <h3 class="text-xl font-bold text-[#111315] mb-3">Kitchen (NVZ) Safety &amp; Dink Control</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Pickleball is won at the Non-Volley Zone. Learn how to stay balanced, avoid costly foot faults, and cultivate the patient "soft game."
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>NVZ Foot Fault Rules:</strong> Balance routines ensuring momentum never carries your feet across the kitchen line.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Push Dink Technique:</strong> Using your shoulder pendulum instead of flicking wrists to keep the ball low and unattackable.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Equipment Fully Provided:</strong> High-grade composite paddles and Dura Fast regulation balls provided on-court.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-gray-200/70 text-xs font-medium text-gray-500">
+            Outcome: Master the kitchen line so you can dictate rallies rather than defending frantically.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: Intermediate Coaching: Skills & Technique (Stage 02 - Most Popular)
+       ======================================================================== -->
+  <section id="intermediate" class="py-16 sm:py-20 bg-[#111315] text-white border-b border-gray-800 scroll-mt-24 relative overflow-hidden">
+    <!-- Subtle ambient glow -->
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-[#D4E834]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4E834]/15 border border-[#D4E834]/30 text-[#D4E834] text-xs font-bold uppercase tracking-wider mb-3">
+            <span class="w-2 h-2 rounded-full bg-[#D4E834]"></span>
+            Stage 02 • Most Popular Curriculum
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Skills &amp; Technique: Elevate Your Rally IQ
+          </h2>
+          <p class="mt-3 text-base text-gray-300 leading-relaxed">
+            Improve shot selection, consistency, footwork movement, placement, and tactical understanding of longer, fast-paced rallies. Built for 2.5–3.5 players looking to dominate social sessions and club ladders.
+          </p>
+        </div>
+
+        <div class="mt-6 lg:mt-0 flex items-center gap-4">
+          <a href="/#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#D4E834] hover:bg-[#c3d72d] text-[#111315] font-extrabold text-xs uppercase tracking-wider transition-all shadow-md tap-target-48">
+            Improve Your Game
+          </a>
+        </div>
+      </div>
+
+      <!-- 3x1 Divs: Detailed Intermediate Pointers Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Intermediate Pointer 1: 3rd Shot Drops & Reset Control -->
+        <div class="rounded-3xl p-8 bg-[#16191D] border border-white/10 shadow-lg flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#D4E834]/15 text-[#D4E834] flex items-center justify-center font-black text-xl mb-6">
+              01
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#D4E834] mb-1">Pillar 1 • The Essential Transition</div>
+            <h3 class="text-xl font-bold text-white mb-3">3rd Shot Drops &amp; Reset Control</h3>
+            <p class="text-sm text-gray-300 leading-relaxed mb-6">
+              The single shot that separates recreational swingers from skilled pickleball players. Master landing soft unattackable balls from 40 feet out.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#D4E834] font-bold">✓</span>
+                <span><strong>Arc &amp; Apex Calibration:</strong> Calculating ball apex on your side of the net so it gently dies in the opposing kitchen.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#D4E834] font-bold">✓</span>
+                <span><strong>Drop vs. Drive Selection:</strong> Reading the server's return depth to know instantly when to drop softly or drive with pace.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#D4E834] font-bold">✓</span>
+                <span><strong>Emergency Mid-Court Resets:</strong> Cushioning fast, aggressive chest-high balls into the kitchen from the transition zone.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-white/10 text-xs font-medium text-gray-400">
+            Outcome: Reliably neutralize hard-hitting opponents and safely work your way up to the kitchen line.
+          </div>
+        </div>
+
+        <!-- Intermediate Pointer 2: Speed-Up Management & Hand Battles -->
+        <div class="rounded-3xl p-8 bg-[#16191D] border border-white/10 shadow-lg flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#0284C7]/20 text-[#38BDF8] flex items-center justify-center font-black text-xl mb-6">
+              02
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#38BDF8] mb-1">Pillar 2 • Net Warfare</div>
+            <h3 class="text-xl font-bold text-white mb-3">Speed-Up Management &amp; Hand Battles</h3>
+            <p class="text-sm text-gray-300 leading-relaxed mb-6">
+              When kitchen dinks accelerate into 60mph hand battles, panic loses points. Develop lighting reactions, tight paddle positions, and baiting tactics.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#38BDF8] font-bold">✓</span>
+                <span><strong>Ready Position &amp; Paddle Height:</strong> Keeping your paddle at 10-or-11 o'clock with relaxed grip pressure for instant blocks.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#38BDF8] font-bold">✓</span>
+                <span><strong>Recognizing "Out" Balls:</strong> Discipline to let high, wild speed-ups sail harmlessly over the baseline.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#38BDF8] font-bold">✓</span>
+                <span><strong>Counter-Punching at the Chicken Wing:</strong> Targeting the opponent’s dominant shoulder and hip pocket to force weak pop-ups.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-white/10 text-xs font-medium text-gray-400">
+            Outcome: Win the firefights at the kitchen line instead of flinching or popping the ball up.
+          </div>
+        </div>
+
+        <!-- Intermediate Pointer 3: Transition Zone Footwork & Error Reduction -->
+        <div class="rounded-3xl p-8 bg-[#16191D] border border-white/10 shadow-lg flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#C5A880]/20 text-[#D4B996] flex items-center justify-center font-black text-xl mb-6">
+              03
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#D4B996] mb-1">Pillar 3 • Tactical Mobility</div>
+            <h3 class="text-xl font-bold text-white mb-3">Transition Footwork &amp; Error Reduction</h3>
+            <p class="text-sm text-gray-300 leading-relaxed mb-6">
+              70% of recreational unforced errors occur when players hit while running. Learn split-stepping, partner mirroring, and patient court recovery.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#D4B996] font-bold">✓</span>
+                <span><strong>The Split-Step Trigger:</strong> Stopping and balancing your weight the millisecond your opponent strikes the ball.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#D4B996] font-bold">✓</span>
+                <span><strong>Partner String Connection:</strong> Moving laterally as a unified wall to prevent massive gaps down the middle channel.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#D4B996] font-bold">✓</span>
+                <span><strong>Unforced Error Audit:</strong> Cutting low-percentage slice shots and impatient attacks to immediately boost match win-rates.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-white/10 text-xs font-medium text-gray-400">
+            Outcome: Transform frantic scrambling into smooth, effortless positioning that wears opponents out.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3: Competitive Coaching (Stage 03 - Advanced / Tournament Prep)
+       ======================================================================== -->
+  <section id="competitive" class="py-16 sm:py-20 bg-white border-b border-gray-200/80 scroll-mt-24">
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider mb-3">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            Stage 03 • Advanced / Tournament Preparation
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#111315] tracking-tight">
+            Competitive Coaching: Tournament Tactics &amp; Composure
+          </h2>
+          <p class="mt-3 text-base text-gray-600 leading-relaxed">
+            Develop smarter tactics, pressure decision-making, doubles court stacking, and high-level tournament match awareness drawn directly from Coach Hari’s PPA Tour Asia medal podiums.
+          </p>
+        </div>
+
+        <div class="mt-6 lg:mt-0 flex items-center gap-4">
+          <a href="/#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white font-bold text-xs uppercase tracking-wider transition-all shadow tap-target-48">
+            Train To Compete
+          </a>
+        </div>
+      </div>
+
+      <!-- 3x1 Divs: Detailed Competitive Pointers Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Competitive Pointer 1: Tournament Match Simulation & Composure -->
+        <div class="rounded-3xl p-8 bg-[#F8F9FA] border border-gray-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#C5A880]/20 text-[#B5966E] flex items-center justify-center font-black text-xl mb-6">
+              01
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-1">Pillar 1 • Match Intelligence</div>
+            <h3 class="text-xl font-bold text-[#111315] mb-3">Tournament Simulation &amp; Composure</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Tournaments are won in the mind. Learn to thrive in tie-breakers, close out match points, and disrupt the opponent's rhythm under pressure.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-amber-700 font-bold">✓</span>
+                <span><strong>High-Pressure Point Simulations:</strong> Starting drills at 9-9 and game-point deficits to build unshakeable mental poise.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-amber-700 font-bold">✓</span>
+                <span><strong>Tactical Timeout Management:</strong> Knowing exactly when to freeze an opponent's scoring run and recalibrate partner focus.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-amber-700 font-bold">✓</span>
+                <span><strong>Wind &amp; Outdoor Court Adaptations:</strong> Adjusting trajectory, power margins, and court depth for Singapore outdoor court humidity and breezes.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-gray-200/70 text-xs font-medium text-gray-500">
+            Outcome: Stop losing tight games in the final 2 points and build true tournament composure.
+          </div>
+        </div>
+
+        <!-- Competitive Pointer 2: Advanced Doubles Stacking & Target Exploitation -->
+        <div class="rounded-3xl p-8 bg-[#F8F9FA] border border-gray-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-[#0284C7]/10 text-[#0284C7] flex items-center justify-center font-black text-xl mb-6">
+              02
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#0284C7] mb-1">Pillar 2 • Doubles Systems</div>
+            <h3 class="text-xl font-bold text-[#111315] mb-3">Stacking &amp; Opponent Targeting</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Maximize your partnership's offensive weapons. Implement full-court stacking, cross-court poaching, and isolating the weaker player.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Full &amp; Half-Court Stacking:</strong> Keeping your dominant forehands in the middle regardless of which side serves or receives.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Poaching Signals &amp; Net Switches:</strong> Clear non-verbal cues that let you steal high-percentage volleys out of thin air.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#0284C7] font-bold">✓</span>
+                <span><strong>Target Isolation:</strong> Pinning the vulnerable opponent deep or in awkward backhand corners while neutralizing their stronger partner.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-gray-200/70 text-xs font-medium text-gray-500">
+            Outcome: Operate as a cohesive doubles unit that systematically dismantles opposing pairs.
+          </div>
+        </div>
+
+        <!-- Competitive Pointer 3: Advanced Paddle Edge Control & Spin Mechanics -->
+        <div class="rounded-3xl p-8 bg-[#F8F9FA] border border-gray-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-black text-xl mb-6">
+              03
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-1">Pillar 3 • Advanced Execution</div>
+            <h3 class="text-xl font-bold text-[#111315] mb-3">Edge Control, Spin &amp; Roll Resets</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-6">
+              Incorporate modern pro mechanics: topspin roll volleys, biting slice returns, and disguised roll dinks that dip sharply over the net.
+            </p>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-gray-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span><strong>Topspin Roll Volley:</strong> Attacking balls below net height by rolling up the back of the ball into opposing feet.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span><strong>Disguise Speed-Ups:</strong> Identical backswing preparation for both push dinks and sudden offensive wrist flicks.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span><strong>Spin Decryption:</strong> Reading topspin, underspin, and side-spin coming off raw carbon fiber paddles to prevent mishits.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-gray-200/70 text-xs font-medium text-gray-500">
+            Outcome: Add pro-level spin and deceptive attack options that generate immediate weak returns.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BEGIN: Coaching Formats & Training Options
+       ======================================================================== -->
+  <section class="py-16 sm:py-20 max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-gray-800 text-xs font-bold uppercase tracking-wider mb-3">
+        Flexible Formats
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[#111315] tracking-tight">
+        Choose Your Coaching Format
+      </h2>
+      <p class="mt-3 text-sm sm:text-base text-gray-600">
+        All sessions take place at private, dedicated courts at 6 Tao Ching Road, Jurong with tournament-grade paddles and balls fully provided.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Option 1 -->
+      <div class="p-7 rounded-2xl bg-white border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-[#0284C7] mb-2">Max Attention</div>
+          <h3 class="text-lg font-bold text-[#111315] mb-2">Private 1-on-1</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+            100% personalized focus on your individual mechanics, video feedback, custom drill pacing, and weakness elimination.
+          </p>
+          <ul class="text-xs text-gray-600 space-y-2 mb-6">
+            <li>✓ Tailored stroke analysis</li>
+            <li>✓ Rapid unforced error fix</li>
+            <li>✓ Custom session scheduling</li>
+          </ul>
+        </div>
+        <a href="/#contact" class="w-full py-2.5 rounded-full border border-gray-300 hover:border-[#111315] text-center font-bold text-xs uppercase tracking-wider transition-colors tap-target-48 flex items-center justify-center">
+          Inquire 1-on-1
+        </a>
+      </div>
+
+      <!-- Option 2 -->
+      <div class="p-7 rounded-2xl bg-white border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-2">Partner Chemistry</div>
+          <h3 class="text-lg font-bold text-[#111315] mb-2">Semi-Private (2-on-1)</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+            Ideal for doubles partners, couples, or friends. Work on partner court communication, cross-court coverage, and joint tactics.
+          </p>
+          <ul class="text-xs text-gray-600 space-y-2 mb-6">
+            <li>✓ Doubles stacking drills</li>
+            <li>✓ Shared progression pace</li>
+            <li>✓ High-intensity live points</li>
+          </ul>
+        </div>
+        <a href="/#contact" class="w-full py-2.5 rounded-full border border-gray-300 hover:border-[#111315] text-center font-bold text-xs uppercase tracking-wider transition-colors tap-target-48 flex items-center justify-center">
+          Inquire 2-on-1
+        </a>
+      </div>
+
+      <!-- Option 3 -->
+      <div class="p-7 rounded-2xl bg-white border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2">Dynamic Social</div>
+          <h3 class="text-lg font-bold text-[#111315] mb-2">Small Group (3–4 Pax)</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+            Dynamic team simulations, competitive rotation drills, and mini tournament games with players at your exact level.
+          </p>
+          <ul class="text-xs text-gray-600 space-y-2 mb-6">
+            <li>✓ Rotational court scenarios</li>
+            <li>✓ High-energy group drills</li>
+            <li>✓ Cost-effective learning</li>
+          </ul>
+        </div>
+        <a href="/#contact" class="w-full py-2.5 rounded-full border border-gray-300 hover:border-[#111315] text-center font-bold text-xs uppercase tracking-wider transition-colors tap-target-48 flex items-center justify-center">
+          Inquire Small Group
+        </a>
+      </div>
+
+      <!-- Option 4 -->
+      <div class="p-7 rounded-2xl bg-white border border-gray-200 shadow-sm card-hover flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-purple-600 mb-2">Age-Adaptive</div>
+          <h3 class="text-lg font-bold text-[#111315] mb-2">Senior Paced (60+)</h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+            Low-impact, joint-friendly pacing tailored for active seniors. Focus on stamina building, injury avoidance, and social joy.
+          </p>
+          <ul class="text-xs text-gray-600 space-y-2 mb-6">
+            <li>✓ Safe movement tempo</li>
+            <li>✓ Balance &amp; eye-hand drills</li>
+            <li>✓ Off-court recovery tips</li>
+          </ul>
+        </div>
+        <a href="/#contact" class="w-full py-2.5 rounded-full border border-gray-300 hover:border-[#111315] text-center font-bold text-xs uppercase tracking-wider transition-colors tap-target-48 flex items-center justify-center">
+          Inquire Senior
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BEGIN: Direct Booking CTA Strip
+       ======================================================================== -->
+  <section class="py-16 bg-[#111315] text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center px-3.5 py-1 rounded-full bg-[#D4E834] text-[#111315] text-xs font-bold uppercase tracking-wider mb-4">
+        Ready To Improve?
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+        Book Your Coaching Session With Hari Today
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
+        Private 1-on-1, semi-private, and small-group training available at 6 Tao Ching Road, Jurong. Equipment is fully provided.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#C5A880] hover:bg-[#B5966E] text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md tap-target-48" href="/#contact">
+          Book A Session
+        </a>
+        <a class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md tap-target-48" href="https://wa.me/6589000521" target="_blank" rel="noopener noreferrer">
+          💬 WhatsApp Coach Hari
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BEGIN: Footer
+       ======================================================================== -->
+  <footer class="bg-white border-t border-gray-200 py-10 text-sm text-gray-600">
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center mb-4">
+            <span class="text-lg font-black text-[#111315]">PickleBall<span class="text-[#0284C7]">4</span>All</span>
+          </div>
+          <p class="text-xs text-gray-500 max-w-sm leading-relaxed">
+            Professional, patient, and results-driven pickleball coaching in Jurong, Singapore. Dedicated to helping players of every age master the sport.
+          </p>
+          <div class="mt-4 flex items-center gap-2 text-xs font-semibold text-gray-700">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            Hari Pickleball Coaching • Jurong, Singapore
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs text-gray-600 font-medium">
+            <li><a class="hover:text-[#0284C7] transition-colors" href="/">Home</a></li>
+            <li><a class="hover:text-[#0284C7] transition-colors" href="/about">About Hari</a></li>
+            <li><a class="text-[#0284C7] font-semibold" href="/coaching">Coaching Programs</a></li>
+            <li><a class="hover:text-[#0284C7] transition-colors" href="/#why-us">Why PickleBall4All</a></li>
+            <li><a class="hover:text-[#0284C7] transition-colors" href="/#reviews">Verified Reviews</a></li>
+            <li><a class="hover:text-[#0284C7] transition-colors" href="/#location">Court Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Details -->
+        <div>
+          <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">Jurong Court</h4>
+          <p class="text-xs text-gray-600 leading-relaxed">
+            6 Tao Ching Road<br>
+            Singapore 618723
+          </p>
+          <p class="text-xs text-gray-800 font-bold mt-2">
+            Phone: <a class="text-[#0284C7] hover:underline" href="tel:+6589000521">+65 8900 0521</a>
+          </p>
+          <p class="text-xs text-emerald-600 font-semibold mt-1">
+            WhatsApp: <a class="hover:underline" href="https://wa.me/6589000521" target="_blank" rel="noopener noreferrer">+65 8900 0521</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+        <p>&copy; 2026 PickleBall4All (Hari Pickleball Coaching). All rights reserved.</p>
+        <p class="text-gray-500">Head Coach: Hari Mohan &bull; Jurong, Singapore</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Mobile Navigation Drawer Script
+       ======================================================================== -->
+  <script>
+    (function () {
+      const toggleBtn = document.getElementById('mobile-menu-toggle');
+      const closeBtn = document.getElementById('mobile-menu-close');
+      const drawer = document.getElementById('mobile-menu-drawer');
+      const backdrop = document.getElementById('mobile-menu-backdrop');
+
+      function openDrawer() {
+        drawer.classList.remove('hidden');
+        backdrop.classList.remove('hidden');
+        drawer.setAttribute('aria-hidden', 'false');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        drawer.classList.add('hidden');
+        backdrop.classList.add('hidden');
+        drawer.setAttribute('aria-hidden', 'true');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      // Initial state
+      closeDrawer();
+
+      if (toggleBtn) toggleBtn.addEventListener('click', openDrawer);
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+      // Close on drawer link click
+      drawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+      });
+    })();
+  </script>
+
+  <!-- Supabase JS Client & Configuration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/js/supabase.js?v=2"></script>
+  <script src="/js/app.js?v=2"></script>
+</body>
+</html>
